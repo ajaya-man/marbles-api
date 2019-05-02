@@ -1,20 +1,10 @@
 'use strict';
-/*
-* Copyright IBM Corp All Rights Reserved
-*
-* SPDX-License-Identifier: Apache-2.0
-*/
-/*
- * Chaincode query
- */
 
 var Fabric_Client = require('fabric-client');
 var path = require('path');
 var util = require('util');
 var os = require('os');
-// var jsonConverter = require('json-style-converter/es5')
-// var CouchDB_KVS = require('fabric-client/lib/impl/CouchDBKeyValueStore');
-//
+
 var fabric_client = new Fabric_Client();
 
 // setup the fabric network
