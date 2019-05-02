@@ -1,18 +1,12 @@
 'use strict';
 
-var log4js = require('log4js');
-var logger = log4js.getLogger('NID enrollment');
 var express = require('express');
 var bodyParser = require('body-parser');
 var http = require('http');
 var util = require('util');
 var app = express();
-// var expressJWT = require('express-jwt');
-// var jwt = require('jsonwebtoken');
-// var bearerToken = require('express-bearer-token');
 var cors = require('cors');
 var path = require('path');
-const uuidv4 = require('uuid/v4');
 
 var invokeCC = require('./middleware/invoke.js');
 var queryCC = require('./middleware/query.js');
@@ -30,42 +24,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
 	extended: false
 }));
-
-// //Set secret variable
-// app.set('secret', 'nidenrollmentdryicesolutions');
-// app.use(expressJWT({
-// 	secret: 'nidenrollmentdryicesolutions'
-// }).unless({
-//     path: ['/login'],
- 
-// }));
-// app.use(bearerToken());
-
-// app.use(function(req, res, next) {
-// 	logger.debug(' ------>>>>>> new request for %s',req.originalUrl);
-// 	if (req.originalUrl.indexOf('/login') >= 0) {
-// 		return next();
-// 	}
-
-// 	var token = req.token;
-// 	jwt.verify(token, app.get('secret'), function(err, decoded) {
-// 		if (err) {
-// 			res.send({
-// 				success: false,
-// 				message: 'Failed to authenticate token. Make sure to include the ' +
-// 					'token returned from /login call in the authorization header ' +
-// 					' as a Bearer token'
-// 			});
-// 			return;
-// 		} else {
-// 			// add the decoded user name and org name to the request object
-// 			// for the downstream code to use
-// 			req.username = decoded.username;
-// 			logger.debug(util.format('Decoded from JWT token: username - %s', decoded.username));
-// 			return next();
-// 		}
-// 	});
-// });
 
 
 var server = http.createServer(app).listen(port, function() {});
