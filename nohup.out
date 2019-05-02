@@ -1,0 +1,292 @@
+[05:27:49] Using gulpfile ~/marbles/gulpfile.js
+[05:27:49] Starting 'env_local'...
+[05:27:49] Finished 'env_local' after 200 μs
+[05:27:49] Starting 'build-sass'...
+[05:27:49] Finished 'build-sass' after 12 ms
+[05:27:49] Starting 'watch-sass'...
+[05:27:49] Finished 'watch-sass' after 13 ms
+[05:27:49] Starting 'watch-server'...
+[05:27:49] Finished 'watch-server' after 4.1 ms
+[05:27:49] Starting 'server'...
+[32minfo[39m: Checking connection profile is done
+[32minfo[39m: Loaded config file /home/ubuntu/marbles/config/marbles_local.json
+[32minfo[39m: Loaded connection profile file /home/ubuntu/marbles/config/connection_profile_local.json
+
+
+
+Connection Profile Lib Functions:()
+  getNetworkName()
+  getNetworkCredFileName()
+  buildTlsOpts()
+  getFirstChannelId()
+  getChannelId()
+  loadPem()
+  getMarblesField()
+  getChaincodeId()
+  getChaincodeVersion()
+  getFirstCaName()
+  getCA()
+  getCasUrl()
+  getAllCaUrls()
+  getCaName()
+  getCaTlsCertOpts()
+  getEnrollObj()
+  getFirstPeerName()
+  getPeer()
+  getPeersUrl()
+  getAllPeerUrls()
+  getPeerEventUrl()
+  getPeerTlsCertOpts()
+  getMarbleUsernamesConfig()
+  getCompanyNameFromFile()
+  getMarblesPort()
+  getEventsSetting()
+  getKeepAliveMs()
+  getFirstOrdererName()
+  getOrderer()
+  getOrderersUrl()
+  getOrdererTlsCertOpts()
+  getBlockDelay()
+  getKvsPath()
+  getFirstOrg()
+  getClientsOrgName()
+  getClientOrg()
+  getMarbleUsernames()
+  getOrgsMSPid()
+  getAdminPrivateKeyPEM()
+  getAdminSignedCertPEM()
+
+
+----------------------------------- Server Up - localhost:3001 -----------------------------------
+Welcome aboard:	 United Marbles
+Channel:	 mychannel
+Org:		 Org1MSP
+CA:		 fabric-ca
+Orderer:	 fabric-orderer
+Peer:		 fabric-peer-org1
+Chaincode ID:	 marbles
+Chaincode Version:  v4
+------------------------------------------ Websocket Up ------------------------------------------
+
+
+[32minfo[39m: [fcw] Going to enroll peer_urls=[grpc://localhost:7051], channel_id=mychannel, uuid=marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1, ca_url=http://localhost:7054, orderer_url=grpc://localhost:7050, enroll_id=admin, enroll_secret=adminpw, msp_id=Org1MSP, kvs_path=/home/ubuntu/fabric-samples/fabcar/hfc-key-store
+[32minfo[39m: [fcw] Successfully loaded enrollment from persistence
+[34mdebug[39m: added peer grpc://localhost:7051
+[34mdebug[39m: [fcw] Successfully got enrollment marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1
+[32minfo[39m: Success enrolling admin
+[34mdebug[39m: Checking if chaincode is already instantiated or not 1
+
+[32minfo[39m: Checking for chaincode...
+[34mdebug[39m: [fcw] Querying Chaincode: read()
+[34mdebug[39m: [fcw] Sending query req: chaincodeId=marbles, fcn=read, args=[selftest], txId=null
+[34mdebug[39m: [fcw] Peer Query Response - len: 5 type: number
+[34mdebug[39m: [fcw] Successful query transaction.
+
+----------------------------- Chaincode found on channel "mychannel" -----------------------------
+
+
+[32minfo[39m: Checking chaincode and ui compatibility...
+[34mdebug[39m: [fcw] Querying Chaincode: read()
+[34mdebug[39m: [fcw] Sending query req: chaincodeId=marbles, fcn=read, args=[marbles_ui], txId=null
+[33mwarn[39m: [fcw] warning - query resp is not json, might be okay: string 4.0.1
+[34mdebug[39m: [fcw] Successful query transaction.
+[32minfo[39m: Chaincode version is good
+[32minfo[39m: Checking ledger for marble owners listed in the config file
+
+[32minfo[39m: Fetching EVERYTHING...
+[34mdebug[39m: [fcw] Querying Chaincode: read_everything()
+[34mdebug[39m: [fcw] Sending query req: chaincodeId=marbles, fcn=read_everything, args=[], txId=null
+[34mdebug[39m: [fcw] Peer Query Response - len: 1778 type: object
+[34mdebug[39m: [fcw] Successful query transaction.
+[34mdebug[39m: This company has registered marble owners
+[34mdebug[39m: Looking for marble owner: amy
+[34mdebug[39m: Did not find marble username: amy
+[32minfo[39m: We need to make marble owners
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[32minfo[39m: Detected that we have NOT launched successfully yet
+[34mdebug[39m: Open your browser to http://localhost:3001 and login as "admin" to initiate startup
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+[34mdebug[39m: ------------------------------------------ incoming request ------------------------------------------
+[34mdebug[39m: New GET request for /home
+ 
+-------------------------------- Incoming WS Msg --------------------------------
+[34mdebug[39m: [ws] received ws msg: {"type":"ping"}
+[32minfo[39m: [fcw] Going to enroll peer_urls=[grpc://localhost:7051], channel_id=mychannel, uuid=marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1, ca_url=http://localhost:7054, orderer_url=grpc://localhost:7050, enroll_id=admin, enroll_secret=adminpw, msp_id=Org1MSP, kvs_path=/home/ubuntu/fabric-samples/fabcar/hfc-key-store
+[32minfo[39m: [fcw] Successfully loaded enrollment from persistence
+[34mdebug[39m: added peer grpc://localhost:7051
+[34mdebug[39m: [fcw] Successfully got enrollment marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1
+ 
+-------------------------------- Incoming WS Msg --------------------------------
+[34mdebug[39m: [ws] received ws msg: {"type":"read_everything","v":1}
+[32minfo[39m: [ws] read everything req
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [checking] on demand req, sending to a client
+
+[32minfo[39m: Fetching EVERYTHING...
+[34mdebug[39m: [fcw] Querying Chaincode: read_everything()
+[34mdebug[39m: [fcw] Sending query req: chaincodeId=marbles, fcn=read_everything, args=[], txId=null
+[34mdebug[39m: [fcw] Peer Query Response - len: 1778 type: object
+[34mdebug[39m: [fcw] Successful query transaction.
+
+[34mdebug[39m: [checking] number of owners: 3
+[34mdebug[39m: [checking] number of marbles: 9
+[34mdebug[39m: [checking] there are new things, sending to all clients
+[34mdebug[39m: [ws] broadcasting to clients.  1 everything
+[34mdebug[39m: [ws] closed
+[34mdebug[39m: ------------------------------------------ incoming request ------------------------------------------
+[34mdebug[39m: New GET request for /home
+[34mdebug[39m: [fcw] Querying Channel Stats
+
+[32minfo[39m: New block detected! 8 low=8, high=0, unsigned=true, currentBlockHash=8812208400035509400014000900006604500056004903589340200000702300086801500004314940000210092600000, previousBlockHash=8812208400035509400014000900006604500056004903589340200000702300086801500004314940000210092600000
+[34mdebug[39m: [checking] there are new things, sending to all clients
+[34mdebug[39m: [ws] broadcasting to clients.  1 block
+
+[32minfo[39m: Fetching EVERYTHING...
+[34mdebug[39m: [fcw] Querying Chaincode: read_everything()
+[34mdebug[39m: [fcw] Sending query req: chaincodeId=marbles, fcn=read_everything, args=[], txId=null
+[34mdebug[39m: [fcw] Peer Query Response - len: 1778 type: object
+[34mdebug[39m: [fcw] Successful query transaction.
+
+[34mdebug[39m: [checking] number of owners: 3
+[34mdebug[39m: [checking] number of marbles: 9
+[34mdebug[39m: [checking] same everything as last time
+ 
+-------------------------------- Incoming WS Msg --------------------------------
+[34mdebug[39m: [ws] received ws msg: {"type":"read_everything","v":1}
+[32minfo[39m: [ws] read everything req
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [checking] on demand req, sending to a client
+
+[32minfo[39m: Fetching EVERYTHING...
+[34mdebug[39m: [fcw] Querying Chaincode: read_everything()
+[34mdebug[39m: [fcw] Sending query req: chaincodeId=marbles, fcn=read_everything, args=[], txId=null
+[34mdebug[39m: [fcw] Peer Query Response - len: 1778 type: object
+[34mdebug[39m: [fcw] Successful query transaction.
+
+[34mdebug[39m: [checking] number of owners: 3
+[34mdebug[39m: [checking] number of marbles: 9
+[34mdebug[39m: [checking] same everything as last time
+[34mdebug[39m: [checking] sending to 1 client
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: ------------------------------------------ incoming request ------------------------------------------
+[34mdebug[39m: New GET request for /home
+[34mdebug[39m: [ws] closed
+[34mdebug[39m: [fcw] Querying Channel Stats
+ 
+-------------------------------- Incoming WS Msg --------------------------------
+[34mdebug[39m: [ws] received ws msg: {"type":"read_everything","v":1}
+[32minfo[39m: [ws] read everything req
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [checking] on demand req, sending to a client
+
+[32minfo[39m: Fetching EVERYTHING...
+[34mdebug[39m: [fcw] Querying Chaincode: read_everything()
+[34mdebug[39m: [fcw] Sending query req: chaincodeId=marbles, fcn=read_everything, args=[], txId=null
+[34mdebug[39m: [fcw] Peer Query Response - len: 1778 type: object
+[34mdebug[39m: [fcw] Successful query transaction.
+
+[34mdebug[39m: [checking] number of owners: 3
+[34mdebug[39m: [checking] number of marbles: 9
+[34mdebug[39m: [checking] same everything as last time
+[34mdebug[39m: [checking] sending to 1 client
+[34mdebug[39m: [ws] closed
+[34mdebug[39m: [fcw] Querying Channel Stats
+[32minfo[39m: [fcw] Going to enroll peer_urls=[grpc://localhost:7051], channel_id=mychannel, uuid=marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1, ca_url=http://localhost:7054, orderer_url=grpc://localhost:7050, enroll_id=admin, enroll_secret=adminpw, msp_id=Org1MSP, kvs_path=/home/ubuntu/fabric-samples/fabcar/hfc-key-store
+[32minfo[39m: [fcw] Successfully loaded enrollment from persistence
+[34mdebug[39m: added peer grpc://localhost:7051
+[34mdebug[39m: [fcw] Successfully got enrollment marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[32minfo[39m: [fcw] Going to enroll peer_urls=[grpc://localhost:7051], channel_id=mychannel, uuid=marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1, ca_url=http://localhost:7054, orderer_url=grpc://localhost:7050, enroll_id=admin, enroll_secret=adminpw, msp_id=Org1MSP, kvs_path=/home/ubuntu/fabric-samples/fabcar/hfc-key-store
+[32minfo[39m: [fcw] Successfully loaded enrollment from persistence
+[34mdebug[39m: added peer grpc://localhost:7051
+[34mdebug[39m: [fcw] Successfully got enrollment marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[32minfo[39m: [fcw] Going to enroll peer_urls=[grpc://localhost:7051], channel_id=mychannel, uuid=marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1, ca_url=http://localhost:7054, orderer_url=grpc://localhost:7050, enroll_id=admin, enroll_secret=adminpw, msp_id=Org1MSP, kvs_path=/home/ubuntu/fabric-samples/fabcar/hfc-key-store
+[32minfo[39m: [fcw] Successfully loaded enrollment from persistence
+[34mdebug[39m: added peer grpc://localhost:7051
+[34mdebug[39m: [fcw] Successfully got enrollment marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[32minfo[39m: [fcw] Going to enroll peer_urls=[grpc://localhost:7051], channel_id=mychannel, uuid=marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1, ca_url=http://localhost:7054, orderer_url=grpc://localhost:7050, enroll_id=admin, enroll_secret=adminpw, msp_id=Org1MSP, kvs_path=/home/ubuntu/fabric-samples/fabcar/hfc-key-store
+[32minfo[39m: [fcw] Successfully loaded enrollment from persistence
+[34mdebug[39m: added peer grpc://localhost:7051
+[34mdebug[39m: [fcw] Successfully got enrollment marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[32minfo[39m: [fcw] Going to enroll peer_urls=[grpc://localhost:7051], channel_id=mychannel, uuid=marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1, ca_url=http://localhost:7054, orderer_url=grpc://localhost:7050, enroll_id=admin, enroll_secret=adminpw, msp_id=Org1MSP, kvs_path=/home/ubuntu/fabric-samples/fabcar/hfc-key-store
+[32minfo[39m: [fcw] Successfully loaded enrollment from persistence
+[34mdebug[39m: added peer grpc://localhost:7051
+[34mdebug[39m: [fcw] Successfully got enrollment marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[32minfo[39m: [fcw] Going to enroll peer_urls=[grpc://localhost:7051], channel_id=mychannel, uuid=marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1, ca_url=http://localhost:7054, orderer_url=grpc://localhost:7050, enroll_id=admin, enroll_secret=adminpw, msp_id=Org1MSP, kvs_path=/home/ubuntu/fabric-samples/fabcar/hfc-key-store
+[32minfo[39m: [fcw] Successfully loaded enrollment from persistence
+[34mdebug[39m: added peer grpc://localhost:7051
+[34mdebug[39m: [fcw] Successfully got enrollment marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[32minfo[39m: [fcw] Going to enroll peer_urls=[grpc://localhost:7051], channel_id=mychannel, uuid=marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1, ca_url=http://localhost:7054, orderer_url=grpc://localhost:7050, enroll_id=admin, enroll_secret=adminpw, msp_id=Org1MSP, kvs_path=/home/ubuntu/fabric-samples/fabcar/hfc-key-store
+[32minfo[39m: [fcw] Successfully loaded enrollment from persistence
+[34mdebug[39m: added peer grpc://localhost:7051
+[34mdebug[39m: [fcw] Successfully got enrollment marblesDockerComposeNetworkmychannelOrg1MSPfabricpeerorg1
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats
+[34mdebug[39m: [fcw] Querying Channel Stats

@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "marbles",
+      "script": "gulp",
+      "args": "marbles_local"
+    }
+  ]
+}
